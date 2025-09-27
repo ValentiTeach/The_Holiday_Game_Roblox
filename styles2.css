@@ -1,52 +1,154 @@
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Holiday</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <header>
-           <div class="holiday-container">
-        <h1 class="Title">Coming soon</h1>
-    </div>
-    </header>
-    <main>
-        <div class="info">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68d4379b37345.png" alt="Info Image 1">
-        </div>
-
-        <div class="decorative-images">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 2" class="image2">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 3" class="image3">
-        </div>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* Прибираємо горизонтальну прокрутку */
+    width: 100%;
+    
+}
 
 
-        <div class="decorative-images2">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 4" class="image4">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 5" class="image5">
-        </div>
+.holiday-container {
+    background-image: url('https://learn.logikaschool.com/uploads/student/4806324/68d43796adb59.png');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        <div class="decorative-images3">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 6" class="image6">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68cc1cab613ab.png" alt="Image 7" class="image7">
-        </div>
-           
-  <div class="Child_Image_Add"> <img src="https://learn.logikaschool.com/uploads/student/4806324/68d4378d9e0de.png" alt="Info Image 1">
-            </div>
-    </main>
-    <footer>
-        <img src="https://learn.logikaschool.com/uploads/student/4806324/68d43792d7145.png" alt="Footer Logo" class="Footer_image_bottom">
-        <div class="decorative-images_footer">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68c8551deb40f.png" alt="Holiday Image" class="footer_image1">
-            <img src="https://learn.logikaschool.com/uploads/student/4806324/68c8551deb40f.png" alt="Holiday Image" class="footer_image2">
-        </div>
-    </footer>
+.Title {
+    font-family: var(--font-family);
+    line-height: 167%;
+    color: #fff;
+    letter-spacing: 0.5em;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px 20px;
+    margin-top: -50px;
+    /* Adjust this value as needed */
+}
+
+.Footer_image_bottom {
+    display: flex;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: -150;
+    transform: translateY(50px)
+}
 
 
-</body>
+.info img {
 
-</html>
+    margin-left: 150px;
+    margin-bottom: -620px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Child_Image_Add {
+    margin-left: 930px;
+    width: 100vw;
+}
+
+
+.decorative-images {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+}
+.image2 {
+    width: 10px;
+    height: 40px;
+    object-fit: contain;
+}
+.image3 {
+    width: 8px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.decorative-images2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin-top: 20px;
+}
+.image4 {
+    width: 8px;
+    height: 30px;
+    object-fit: contain;
+}
+.image5 {
+    width: 8px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: auto;
+}
+
+.decorative-images3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.image6 {
+    width: 10px;
+    height: 20px;
+    object-fit: contain;
+}
+.image7 {
+    width: 10px;
+    height: 15px;
+    object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+    .info img {
+        margin-left: -600;
+        margin-bottom: -465px;
+
+    }
+
+    .Child_Image_Add {
+        margin-left: 0;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: end;
+
+    }
+
+    .Footer_image_bottom {
+        height: auto;
+        margin: 0;
+        transform: none;
+        width: 100vw;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -160px;
+    }
+
+    footer {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .decorative-images,
+    .decorative-images2,
+    .decorative-images3 {
+        display: none;
+    }
+}
